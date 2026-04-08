@@ -12,31 +12,46 @@ The project uses a Student Performance dataset containing 396 student records an
 * **Environmental:** Family background and parent education levels.
 
 ## My Workflow
-1. **Exploratory Data Analysis (EDA):** I spent time exploring the data to see what factors actually impact student grades. (Spoiler: Attendance and historical grades are the biggest factors).
-2. **Feature Engineering:** Cleaned the data and encoded the categorical variables so the algorithms could read them.
-3. **Model Training:** I personally implemented and tuned **Logistic Regression**, **Support Vector Machine (SVM)**, **Decision Tree** ,**K-Nearest Neighbors (KNN)**, **Random Forest** and **Gradient Boosting** classifiers.
-4. **Evaluation:** Tested the models against unseen data to check their accuracy.
+1. **Exploratory Data Analysis (EDA):** I spent time exploring the data to see what factors actually impact student grades. 
+2. **Feature Engineering & Scaling:** I cleaned the data, encoded categorical variables, and used `StandardScaler` to normalize the data (which ended up being crucial for the linear models).
+3. **Model Training:** I trained several different algorithms to see how they handled the same dataset.
+4. **Evaluation:** Tested the models against unseen data and generated Confusion Matrices to analyze the exact misclassifications.
 
-## Results & Model Comparison
-To make sure we had the best approach, my group and I evaluated several different algorithms (including Logistic Regression, SVM, KNN, and Naive Bayes) to see what worked best on this specific dataset. 
+## ⚙️ Models Implemented & Results
+Rather than just picking one model and calling it a day, I wanted to compare a variety of algorithms to truly understand their behavior. I implemented and evaluated:
 
-For the primary models I implemented, the results were:
-* **Decision Tree:** 88.6% Accuracy
-* **Random Forest:** 89.8% Accuracy
+| Model | Accuracy |
+| :--- | :--- |
+| **Logistic Regression** | **94.9%** ⭐ |
+| **Random Forest** | 89.8% |
+| **Decision Tree** | 88.6% |
+| **Support Vector Machine (SVM)** | 88.6% |
+| **Gradient Boosting** | 88.6% |
+| **K-Nearest Neighbors (KNN)** | 87.3% |
 
-Random Forest ended up being the strongest performer because its ensemble learning method handled the complexity of the student data better and reduced overfitting.
+### 🔍 The Biggest Surprise (Why Logistic Regression Won)
+The most interesting outcome of this project was that **Logistic Regression** performed the best, beating out much heavier ensemble models like Random Forest and Gradient Boosting. 
 
-## Key Takeaways
-Working on this data showed me that a student's academic history is the strongest predictor of their final performance. However, behavioral habits—especially dedicated study time and limiting absences—play a massive, measurable role in reducing academic risk.
+This taught me a huge lesson: student performance patterns in this specific dataset are relatively structured and linearly separable. It proves that more complex models aren't always better, and sometimes a simpler, highly interpretable algorithm is exactly what you need!
+
+## Key Learnings
+Working on this project helped me realize that:
+* Previous academic performance and attendance strongly influence future results.
+* Understanding the shape of your data matters more than the complexity of the algorithm.
+* Comparing multiple models gives you a much deeper insight into the problem than just relying on one.
 
 ## Built With
-* Python (Pandas, NumPy)
-* Scikit-Learn
-* Matplotlib & Seaborn
-* VS Code
+* **Language:** Python
+* **Data Manipulation:** Pandas & NumPy
+* **Machine Learning:** Scikit-Learn
+* **Visualization:** Matplotlib (for Confusion Matrices & metrics)
+* **Environment:** VS Code
 
-## Future Plans
-Right now, this is a standalone codebase, but I would love to eventually turn this into a web application or a real-time dashboard that faculty could actually use to monitor student success.
+## 🚀 Future Improvements
+Right now, this is a standalone codebase, but in the future, I plan to:
+* Convert this into a web application dashboard.
+* Enable real-time prediction capabilities for educators.
+* Add Explainable AI (XAI) features to clearly show *why* a specific student is predicted to be at risk.
 
 ---
 *Created by Nandini Kandela*
