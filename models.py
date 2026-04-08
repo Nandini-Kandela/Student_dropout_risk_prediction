@@ -85,4 +85,4 @@ gb = GradientBoostingClassifier(random_state=42)
 evaluate_model(gb, "Gradient Boosting")
 
 
-print("\n✅ ALL MODELS TRAINED SUCCESSFULLY!")
+print("\n ALL MODELS TRAINED SUCCESSFULLY!")
