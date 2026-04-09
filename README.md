@@ -29,8 +29,13 @@ Rather than just picking one model and calling it a day, I wanted to compare a v
 | **Gradient Boosting** | 88.6% |
 | **K-Nearest Neighbors (KNN)** | 87.3% |
 
+<img width="325" height="258" alt="image" src="https://github.com/user-attachments/assets/50138dc5-4d0c-4bba-abab-efb77cd82da2" />
+
+
 ### The Biggest Surprise (Why Logistic Regression Won)
 The most interesting outcome of this project was that **Logistic Regression** performed the best, beating out much heavier ensemble models like Random Forest and Gradient Boosting. 
+<img width="1186" height="552" alt="image" src="https://github.com/user-attachments/assets/1363cd91-baf4-4d1a-a35d-3ab29a4f6db2" />
+
 
 This taught me a huge lesson: student performance patterns in this specific dataset are relatively structured and linearly separable. It proves that more complex models aren't always better, and sometimes a simpler, highly interpretable algorithm is exactly what you need!
 
